@@ -1,16 +1,13 @@
 import "./App.css";
 // import compoents
 import Paper from "./component/paper";
-
+import Header from "./component/header";
 function App() {
   return (
     <div className="App">
       <Paper>
-        <section className="header">
-          <button className="header-btn black-color">Add</button>
-          <h1 className="header-title">Todo List</h1>
-          <button className="header-btn main-red-color">Clear</button>
-        </section>
+        <Header/> 
+        
 
         <section className="add">
           <form action="" className="add-form">
