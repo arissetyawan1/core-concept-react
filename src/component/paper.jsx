@@ -3,6 +3,9 @@ import React from "react";
 import propTypes from "prop-types";
 
 // component Paper
+// fungsi children di sini sebagai props / property yang dapat direusable dan sebagai base dari sebuah layout
+
+
 const Paper = ({ children }) => {
   return (
     <div className="container">

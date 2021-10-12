@@ -2,55 +2,15 @@ import "./App.css";
 // import compoents
 import Paper from "./component/paper";
 import Header from "./component/header";
+import TodoForm from "./component/todoform";
+import Todos from "./component/todos";
 function App() {
   return (
     <div className="App">
       <Paper>
-        <Header/> 
-        
-
-        <section className="add">
-          <form action="" className="add-form">
-            <input type="text" className="add-input" />
-            <button className="add-btn black-color">Add</button>
-          </form>
-        </section>
-
-        <section className="todos">
-          <div className="todo">
-            <span className="todo-text">Learning React Js</span>
-          </div>
-          <div className="todo">
-            <span className="todo-text">Learning React Js</span>
-          </div>
-          <div className="todo">
-            <span className="todo-text">Learning React Js</span>
-          </div>
-          <div className="todo">
-            <span className="todo-text">Learning React Js</span>
-          </div>
-          <div className="todo">
-            <span className="todo-text">Learning React Js</span>
-          </div>
-          <div className="todo">
-            <span className="todo-text">Learning React Js</span>
-          </div>
-          <div className="todo">
-            <span className="todo-text">Learning React Js</span>
-          </div>
-          <div className="todo">
-            <span className="todo-text">Learning React Js</span>
-          </div>
-          <div className="todo">
-            <span className="todo-text">Learning React Js</span>
-          </div>
-          <div className="todo">
-            <span className="todo-text">Learning React Js</span>
-          </div>
-          <div className="todo">
-            <span className="todo-text">Learning React Js</span>
-          </div>
-        </section>
+        <Header />
+        <TodoForm />
+        <Todos />
       </Paper>
     </div>
   );
