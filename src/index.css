@@ -119,6 +119,7 @@ html {
 .todos {
   display: flex;
   flex-direction: column;
+  min-height: 500px;
 }
 
 .todo {
@@ -127,7 +128,7 @@ html {
   text-align: center;
   min-height: 34px;
   margin: 16px 0 0;
-  font-size: 24px;
+  font-size: 12x px;
   border-bottom: 1px solid var(--main-red-color);
 }
 
