@@ -1,10 +1,18 @@
 import Todo from "./todo";
 
-const Todos = ({ todos }) => {
+const Todos = ({ todos, completeTodo }) => {
   return (
     <section className="todos">
-      {todos.map((index) => {
-        return <Todo text={index.text} />;
+      {todos.map((todos, index) => {
+        return (
+          <Todo
+            key={index}
+            text={todos.text}
+            isCompletedTodo={todos.isCompleted}
+            completeTodo={completeTodo}
+            index={index}
+          />
+        );
       })}
     </section>
   );

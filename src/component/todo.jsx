@@ -1,9 +1,12 @@
-
-
-const Todo = ({ text }) => {
+const Todo = ({ text, completeTodo, index, isCompletedTodo }) => {
   return (
-    <div className="todo">
-      <span className="todo-text">{text}</span>
+    <div className="todo" onClick={() => completeTodo(index)}>
+      <span
+        className="todo-text"
+        style={{ textDecoration: isCompletedTodo ? "line-through" : "initial" }}
+      >
+        {text}
+      </span>
     </div>
   );
 };

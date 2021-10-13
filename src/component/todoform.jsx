@@ -7,6 +7,8 @@ const TodoForm = ({ addTodo, showAddValue }) => {
     e.preventDefault();
     if (!value) {
       alert("Please insert a value input!!!");
+    } else if (value.length > 20) {
+      alert("Your typing is too long, please type under 25 character!!!");
     } else {
       // addTodo merupakan sebuah function props yang akan menerima nilai dari inputan yang akan dimasukan ke dalam list todo
       addTodo(value);
