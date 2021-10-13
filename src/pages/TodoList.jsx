@@ -15,9 +15,12 @@ const TodoList = () => {
   ]);
 
   const addTodo = (value) => {
-    const addedValueTodo = [...todos, { text: value }];
-
-    setTodos(addedValueTodo);
+    if (todos.length < 10) {
+      const addedValueTodo = [...todos, { text: value }];
+      setTodos(addedValueTodo);
+    } else {
+      alert("Only 10 todo list");
+    }
   };
 
   // set Toggle Add Button
@@ -32,10 +35,15 @@ const TodoList = () => {
     addTodo[index].isCompleted = !addTodo[index].isCompleted;
     setTodos(addTodo);
   };
-
+  // clear todos
+  const clearTodos = () => setTodos([]);
   return (
     <Paper>
-      <Header showAddBtn={funcShowAddBtn} showAddState={showAddBtn} />
+      <Header
+        showAddBtn={funcShowAddBtn}
+        showAddState={showAddBtn}
+        clearTodos={clearTodos}
+      />
       <TodoForm addTodo={addTodo} showAddValue={showAddBtn} />
       <Todos todos={todos} completeTodo={completeTodo} />
     </Paper>
