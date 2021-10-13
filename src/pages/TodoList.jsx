@@ -14,10 +14,16 @@ const TodoList = () => {
 
     setTodos(addedValueTodo);
   };
+
+  // set Toggle Add Button
+  const [showAddBtn, setShowAddBtn] = useState(false);
+
+  const funcShowAddBtn = () => setShowAddBtn(!showAddBtn);
+
   return (
     <Paper>
-      <Header />
-      <TodoForm addTodo={addTodo} />
+      <Header showAddBtn={funcShowAddBtn} />
+      <TodoForm addTodo={addTodo} showAddValue={showAddBtn} />
       <Todos todos={todos} />
     </Paper>
   );

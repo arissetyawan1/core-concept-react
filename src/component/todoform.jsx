@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const TodoForm = ({ addTodo }) => {
+const TodoForm = ({ addTodo, showAddValue }) => {
   const [value, setValue] = useState("");
 
   const handlerFormInput = (e) => {
@@ -15,19 +15,23 @@ const TodoForm = ({ addTodo }) => {
     }
   };
 
-  return (
-    <section className="add">
-      <form action="" className="add-form" onSubmit={handlerFormInput}>
-        <input
-          type="text"
-          className="add-input"
-          value={value}
-          onChange={(e) => setValue(e.target.value)}
-        />
-        <button className="add-btn black-color">Add</button>
-      </form>
-    </section>
-  );
+  if (showAddValue) {
+    return (
+      <section className="add">
+        <form action="" className="add-form" onSubmit={handlerFormInput}>
+          <input
+            type="text"
+            className="add-input"
+            value={value}
+            onChange={(e) => setValue(e.target.value)}
+          />
+          <button className="add-btn black-color">Add</button>
+        </form>
+      </section>
+    );
+  } else {
+    return null;
+  }
 };
 
 export default TodoForm;
