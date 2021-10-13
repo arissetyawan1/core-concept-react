@@ -7,27 +7,17 @@ import { useState } from "react";
 
 const TodoList = () => {
   // set State untuk membuat data todo
-  const [todos, setTodos] = useState([
-    {
-      text: "Belajar React 1",
-    },
-    {
-      text: "Belajar Component React",
-    },
-    {
-      text: "Belajar Layouting React",
-    },
-    {
-      text: "Belajar State React",
-    },
-    {
-      text: "Belajar Stateless React",
-    }
-  ]);
+  const [todos, setTodos] = useState([]);
+
+  const addTodo = (value) => {
+    const addedValueTodo = [...todos, { text: value }];
+
+    setTodos(addedValueTodo);
+  };
   return (
     <Paper>
       <Header />
-      <TodoForm />
+      <TodoForm addTodo={addTodo} />
       <Todos todos={todos} />
     </Paper>
   );

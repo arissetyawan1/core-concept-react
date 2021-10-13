@@ -15,7 +15,6 @@ const TodoForm = ({ addTodo }) => {
     }
   };
 
-  console.log("value", value);
   return (
     <section className="add">
       <form action="" className="add-form" onSubmit={handlerFormInput}>
