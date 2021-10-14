@@ -36,7 +36,8 @@ const TodoList = () => {
     setTodos(addTodo);
   };
   // clear todos
-  const clearTodos = () => setTodos([]);
+  // cegah clearTodos() berjalan apabila kondisi showAddBtn masih true
+  const clearTodos = () => !showAddBtn && setTodos([]);
   return (
     <Paper>
       <Header
